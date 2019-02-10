@@ -9,3 +9,7 @@ func Reverse(s string) string {
 	}
 	return string(r)
 }
+
+func hiddenfunc(s string) string {
+	return "You can't see me!"
+}
