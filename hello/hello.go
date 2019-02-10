@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/jreidell/golang/strutils"
+)
 
 func main() {
-	fmt.Printf("Hello world!\n")
+	fmt.Printf(strutils.Reverse("!oG ,morF !eoJ ,olleH\n"))
 }
