@@ -1,4 +1,4 @@
-// Package stringutil contains utility methods/functions for working with strings.
+// Package strutils contains utility methods/functions for working with strings.
 package strutils
 
 // Reverse method returns it's argument string reversed run-wise left-to-right.
@@ -10,6 +10,8 @@ func Reverse(s string) string {
 	return string(r)
 }
 
+// lower-case functions are marked PRIVATE
+// upper-case functions are marked PUBLIC
 func hiddenfunc(s string) string {
 	return "You can't see me!"
 }
