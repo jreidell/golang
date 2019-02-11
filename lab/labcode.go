@@ -10,9 +10,9 @@ import (
 )
 
 var (
-	ToBe bool = false
-	MaxInt uint64 = 1<<64 - 1
-	z complex128 = cmplx.Sqrt(-5 + 12i)
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
 func main() {
@@ -59,8 +59,21 @@ func main() {
 	fmt.Println()
 
 	defaultvalues()
+
+	fmt.Println()
+
+	typeconvtest()
 }
 
+// typeconvtest is meant to demonstrate type conversions in Go
+func typeconvtest() {
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+}
+
+// defaultvalues demonstrates default values for specific types
 func defaultvalues() {
 	var i int
 	var f float64
@@ -70,6 +83,7 @@ func defaultvalues() {
 	fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }
 
+// cmplxmath demonstrates complex math problems and printing them using Go formatting
 func cmplxmath() {
 	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
 
@@ -78,12 +92,14 @@ func cmplxmath() {
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 }
 
+// nakedreturnsplit demonstrates a method using a naked return. return vars are named in the signature and not explicitly returned
 func nakedreturnsplit(sum int) (x, y int) {
 	x = sum * 4 / 9
 	y = sum - x
 	return
 }
 
+// writeswapresult write out the swap method results
 func writeswapresult() {
 	a, b := swap("Rock", "You")
 
@@ -92,24 +108,29 @@ func writeswapresult() {
 	fmt.Println("I'm swapping these out, Rock You ! ", a, b, "!")
 }
 
+// swap the values that are input to the method, return them in reverse order
 func swap(x, y string) (string, string) {
 	return y, x
 }
 
+// add demonstrates addition
 func add(x, y int) int {
 	return x + y
 }
 
+// sqrttest math demo
 func sqrttest(f float64) {
 	fmt.Printf("Now you have %g problems.\n", math.Sqrt(f))
 }
 
+// randtest random number gen demo
 func randtest() {
 	fmt.Println("Have some random number yo!")
 
 	fmt.Println("The number is now ", rand.Intn(time.Now().Nanosecond()))
 }
 
+// timetest deomonstrates getting the current system time
 func timetest() {
 	fmt.Println("Here we are again!")
 
