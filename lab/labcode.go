@@ -1,4 +1,5 @@
 // Lab is a collection of Tour of Go examples and learning excercises
+// This code corresponds to the Packages, variables, and functions module
 package main
 
 import (
