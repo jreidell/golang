@@ -54,6 +54,24 @@ func main() {
 	funwithconst()
 
 	funwithnumconst()
+
+	bitshifter()
+}
+
+// bitshifter is to demonstrate the use of bitwise shift operators
+func bitshifter() {
+	num := 30
+	shift := 1
+
+	result := num >> uint(shift)
+
+	fmt.Println("30 >> 1 = ", result, " or 30 / 2 = 15")
+	fmt.Println()
+
+	result = num << uint(shift)
+
+	fmt.Println("1 >> 30 = ", result, " or 30 * 2 = 60")
+	fmt.Println()
 }
 
 // Pi decalred for funwithconst()
