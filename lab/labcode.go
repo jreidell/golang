@@ -65,12 +65,12 @@ func bitshifter() {
 
 	result := num >> uint(shift)
 
-	fmt.Println("30 >> 1 = ", result, " or 30 / 2 = 15")
+	fmt.Println("30 >> 1 =", result, " or 30 / 2 =", (30 / 2))
 	fmt.Println()
 
 	result = num << uint(shift)
 
-	fmt.Println("1 >> 30 = ", result, " or 30 * 2 = 60")
+	fmt.Println("1 >> 30 =", result, " or 30 * 2 =", (30 * 2))
 	fmt.Println()
 }
 
